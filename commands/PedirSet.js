@@ -19,7 +19,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setColor(0x0099FF)
             .setTitle(':rotating_light: PEDIR CARGO MEMBRO/SET :rotating_light:')
-            .setDescription('## Clique no botão abaixo e preencha o formulario com seu nome e de onde me conhece!')
+            .setDescription('## Se você concorda com as regras, clique no botão abaixo para pedir seu cargo de membro!')
             .setThumbnail('https://cdn.discordapp.com/attachments/788867955977879613/1250252310769176586/BEMVINDO.png?ex=666a43b3&is=6668f233&hm=763af53df5d42448029fdbe4fc2121f71c6abe29d8c41de7a66930763f9c1b8b&');
 
         const PedirSet = new ButtonBuilder()
