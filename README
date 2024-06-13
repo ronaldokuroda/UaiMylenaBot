@@ -1,0 +1,48 @@
+versao 1.0.2
+feito em 11/06/2024
+author: Ronaldo Kuroda
+
+Parte do codigo transformado em uma função o que melhorou a resposta dos meus comandos
+A organizacao dos meus codigos ao meu ver ficou um pouco mais claro.
+
+Adicionado um botao para pessoal solicitar seu set. basta adicionar o id da sala a qual sera enviado o botao.
+Modificado o sistema para assim que adicionar os novos codigos, ele enviar o embed do texas roleplay.
+Adicionado tratamento de erros
+
+versao 1.0.1
+feito em 11/06/2024
+author: Ronaldo Kuroda
+
+Adicionado o comando /clear onde posso selecionar a quantidade de mensagens a ser excluidas
+Corrigido o comando de codigos onde ao adicionar novos codigos ele mantia os velhos, agora ele limpa e envia os novos codigos
+
+
+versao 1.0.0
+feito em 11/06/2024
+author: Ronaldo Kuroda
+
+Um bot personalisado para o discord Uai Mylena com alguns comandos como 
+
+/texas que envia uma embed com novos codigos para o texas roleplay
+/clearall que limpa todas as msg do canal
+/codigo que troca os codigos do texas roleplay
+/apelido que troca o apelido do membro e adiciona um cargo
+
+
+no .env
+
+TOKEN = "seu_token"
+CLIENT_ID = "seu client ID disponivel quando cria o bot no site do discord developer"
+GUILD_ID = "ID do seu discord"
+canalTexasID = "ID do canal a qual sera enviado uma embed com novos codigos"
+CargoID_Set = "ID do cargo que sera setado quando alguem entra e preenche o formulario com o nome e de onde venho"
+EntradaID = "ID do canal que vai enviar a mensagem de quem entrou"
+SaidaID =  "ID do canal que vai enviar a mensagem de quem saiu"
+Permissao = "ID do cargo de quem pode executar os comandos"
+CanalSetID = "ID do canal de texto onde vai ficar o comando para o pessoal pedir o set"
+
+O código foi desenvolvido para fins educativos (estudo) com ajuda de documentacao, inteligencia artificial (chat gpt) e com alguns tutoriais como a de Rafaella Balerini.
+
+
+
+
