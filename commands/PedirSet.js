@@ -24,7 +24,7 @@ module.exports = {
 
         const PedirSet = new ButtonBuilder()
             .setCustomId('PedirSet')
-            .setLabel('SOLICITAR SET')
+            .setLabel('TORNAR MEMBRO')
             .setStyle(ButtonStyle.Primary);
 
         const row = new ActionRowBuilder().addComponents(PedirSet);
