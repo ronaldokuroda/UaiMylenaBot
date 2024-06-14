@@ -9,7 +9,7 @@ const {  Permissao } = process.env;
 module.exports={
     data: new SlashCommandBuilder()
             .setName("anuncio")
-            .setDescription("Realiza os anuncios no da live!"),
+            .setDescription("Realiza os anuncios da live!"),
 
     async execute(interaction) {
 
