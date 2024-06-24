@@ -4,7 +4,7 @@ const { CriarApelido } = require("./funcoes/Apelido.js")
 const { TexasRoleplay } = require("./funcoes/TexasRoleplay.js")
 const dotenv = require('dotenv');
 dotenv.config();
-const {TOKEN, CargoID_Set, CanalAnuncioID} = process.env
+const {TOKEN, CargoID_Set, CanalAnuncioID, CanalAnuncioLiveID} = process.env
 
 const client = new Client({ 
  intents: [
@@ -85,6 +85,39 @@ client.on(Events.InteractionCreate, async interaction => {
     } catch (error) {
       return handleError(interaction, error);
     }
+
+  }
+
+  else if (interaction.customId === 'anunciolive') {
+
+    await interaction.reply({ content: 'Anuncio de Live Realizado!', ephemeral: true  });
+
+    const TituloLive = interaction.fields.getTextInputValue('titulo');
+    const AnunciarLive = interaction.fields.getTextInputValue('anuncio');
+
+    console.log(TituloLive, AnunciarLive)
+
+
+    const canalResposta = interaction.client.channels.cache.get(CanalAnuncioLiveID);
+
+    if (!canalResposta) {
+      return handleError(interaction, new Error('Canal não encontrado.'));
+  }
+
+  try {
+    
+    await canalResposta.send({  content: ` # **${TituloLive}**\n ## ${AnunciarLive} || @everyone || \n https://www.tiktok.com/@uaimylenaa/live`  })
+
+  } catch (error) {
+
+    return handleError(interaction, error);
+
+  }
+
+
+    
+
+
 
   }
 

@@ -27,7 +27,7 @@ async function ClearAll(interaction) {
             }
         } while (messages.size >= 2);
 
-        await interaction.channel.send({ content: "Todas as mensagens foram apagadas", ephemeral: true });
+        await interaction.channel.send({ content: " Mensagem Apagada ", ephemeral: true });
 
     } catch (error) {
         

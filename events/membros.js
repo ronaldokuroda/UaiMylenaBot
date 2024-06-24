@@ -2,14 +2,14 @@
 
 const dotenv = require('dotenv');
 dotenv.config();
-const {EntradaID} = process.env
+const {EntradaID, SaidaID} = process.env
 
 module.exports = (client) => {
     client.on('guildMemberAdd', async member => {
-        const channelID = EntradaID;
-        if (!channelID) return;
+        const channelEntradaID = EntradaID;
+        if (!channelEntradaID) return;
     
-        const channel = member.guild.channels.cache.get(channelID);
+        const channel = member.guild.channels.cache.get(channelEntradaID);
         if (!channel) return;
     
         // Enviar a mensagem de boas-vindas
@@ -17,10 +17,10 @@ module.exports = (client) => {
     });
   
     client.on('guildMemberRemove', async member => {
-        const channelID = EntradaID;
-        if (!channelID) return;
+        const channelSaidaID = SaidaID;
+        if (!channelSaidaID) return;
     
-        const channel = member.guild.channels.cache.get(channelID);
+        const channel = member.guild.channels.cache.get(channelSaidaID);
         if (!channel) return;
     
         // Enviar a mensagem de despedida
